@@ -92,7 +92,7 @@ username_entry = Entry(win,
                            highlightthickness=2,
                            highlightbackground='red',
                            highlightcolor='red')
-username_entry.place(x=1100, y=410)
+username_entry.place(x=1100, y=407)
 
 #password
 password=Label(win,
@@ -108,13 +108,13 @@ password_entry = Entry(win,
                            highlightthickness=2,
                            highlightbackground= 'red',
                            highlightcolor='red')
-password_entry.place(x=1100, y=500)
+password_entry.place(x=1100, y=487)
 
 #show
 var=IntVar()
 show=Checkbutton(win,
                  text="show", variable=var, command=toggle_password)
-show.place(x=1420, y=510)
+show.place(x=1420, y=495)
 
 #Login
 login_button = Button(win,
@@ -127,7 +127,7 @@ login_button = Button(win,
                 command= login,
                 padx=50,
                 pady=0)
-login_button.place(x=1150, y=580)
+login_button.place(x=1150, y=565)
 login_button.bind("<Enter>", login_on_enter)
 login_button.bind("<Leave>", login_on_leave)
 
