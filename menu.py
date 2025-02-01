@@ -13,7 +13,7 @@ root = Tk()
 root.title('Instant Order')
 root.geometry('1920x1080')
 root.config(bg='white')
-logo = PhotoImage(file='instantorder_logo.png')
+logo = PhotoImage(file='instantorder_logowithoutbg.png')
 root.iconphoto(True, logo)
 
 #Border
@@ -22,6 +22,7 @@ canvas.pack()
 canvas.create_rectangle(20, 100, 1510, 700, outline='#d40707', width=5, dash=(5,2))
 
 #Logo Mark
+logo_image= PhotoImage(file='instantorder_logo.png')
 original_logo_mark = Image.open('instantorder_logo.png')
 resized_logo_mark = original_logo_mark.resize((120, 120), Image.Resampling.LANCZOS)
 logo_mark= ImageTk.PhotoImage(resized_logo_mark)

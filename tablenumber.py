@@ -14,7 +14,7 @@ root1 = Tk()
 root1.title('Table Number')
 root1.geometry('1920x1080')
 root1.configure(bg='white')
-logo = PhotoImage(file='instantorder_logo.png')
+logo = PhotoImage(file='instantorder_logowithoutbg.png')
 root1.iconphoto(True, logo)
 
 #Canvas
@@ -23,6 +23,7 @@ canvas.pack()
 canvas.create_rectangle(300, 100, 1200, 600, outline='#d40707', width=5)
 
 #Logo Mark
+logo_image= PhotoImage(file='instantorder_logo.png')
 original_logo_mark = Image.open('instantorder_logo.png')
 resized_logo_mark = original_logo_mark.resize((120, 120), Image.Resampling.LANCZOS)
 logo_mark= ImageTk.PhotoImage(resized_logo_mark)

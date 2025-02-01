@@ -33,29 +33,20 @@ logo=PhotoImage(file="instantorder_logowithoutbg.png")
 win.iconphoto(True, logo)
 
 #Logo Image
-original_logo_image = Image.open("instantorder_logowithoutbg.png")
+logo_image= PhotoImage(file='instantorder_logo.png')
+original_logo_image = Image.open("instantorder_logo.png")
 resized_logo_image = original_logo_image.resize((800, 600), Image.Resampling.LANCZOS)
 logo_image = ImageTk.PhotoImage(resized_logo_image)
 logo_label = Label(win, image=logo_image, bg="white")
 logo_label.place(x=30, y=-150)
 
-#Instant Order
-instant_order = Label(win,
-                      text="Instant Order",
-                      font=("Berlin Sans FB", 72,'bold'),
-                      bg="white",
-                      fg="red",)
-instant_order.place(x=100, y=205)
-
-#
-
 #Place your order in an instant
 slogan = Label(win,
                     text="Place your order in an instant",
-                    font=("Arial", 24,),
+                    font=("Arial", 20, 'italic'),
                     bg="white",
                     fg="black",)
-slogan.place(x=200, y=300)
+slogan.place(x=220, y=250)
 
 #Discription
 discription1= Label(win, text='"Instant Order" is a simple and efficient application that',
@@ -94,14 +85,14 @@ username=Label(win,
                 font=("Arial", 30,),
                 bg="white",
                 fg="black",)
-username.place(x=900, y=340)
+username.place(x=900, y=400)
 username_entry = Entry(win,
                            font=("Arial", 20,),
                            width=20,
                            highlightthickness=2,
                            highlightbackground='red',
                            highlightcolor='red')
-username_entry.place(x=1100, y=350)
+username_entry.place(x=1100, y=410)
 
 #password
 password=Label(win,
@@ -109,7 +100,7 @@ password=Label(win,
                 font=("Arial", 30,),
                 bg="white",
                 fg="black",)
-password.place(x=900, y=430)
+password.place(x=900, y=480)
 password_entry = Entry(win,
                            show="*",
                            font=("Arial", 20,),
@@ -117,13 +108,13 @@ password_entry = Entry(win,
                            highlightthickness=2,
                            highlightbackground= 'red',
                            highlightcolor='red')
-password_entry.place(x=1100, y=440)
+password_entry.place(x=1100, y=500)
 
 #show
 var=IntVar()
 show=Checkbutton(win,
                  text="show", variable=var, command=toggle_password)
-show.place(x=1420, y=448)
+show.place(x=1420, y=510)
 
 #Login
 login_button = Button(win,
@@ -136,7 +127,7 @@ login_button = Button(win,
                 command= login,
                 padx=50,
                 pady=0)
-login_button.place(x=1150, y=520)
+login_button.place(x=1150, y=580)
 login_button.bind("<Enter>", login_on_enter)
 login_button.bind("<Leave>", login_on_leave)
 
