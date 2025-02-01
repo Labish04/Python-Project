@@ -123,20 +123,20 @@ password_entry.place(x=1100, y=440)
 var=IntVar()
 show=Checkbutton(win,
                  text="show", variable=var, command=toggle_password)
-show.place(x=1425, y=448)
+show.place(x=1420, y=448)
 
 #Login
 login_button = Button(win,
                 text="Login",
-                font=("Arial", 30,'bold'),
+                font=("Arial", 25,'bold'),
                 bg="#d40707",
                 fg="black",
                 activeforeground='black',
                 activebackground='#fc0303',
                 command= login,
-                padx=20,
+                padx=50,
                 pady=0)
-login_button.place(x=1230, y=550)
+login_button.place(x=1150, y=520)
 login_button.bind("<Enter>", login_on_enter)
 login_button.bind("<Leave>", login_on_leave)
 

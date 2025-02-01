@@ -19,7 +19,7 @@ root.iconphoto(True, logo)
 #Border
 canvas = Canvas(root, width=1920, height=1080, bg='white', highlightthickness=0)
 canvas.pack()
-canvas.create_rectangle(20, 100, 1510, 730, outline='#d40707', width=5, dash=(5,2))
+canvas.create_rectangle(20, 100, 1510, 700, outline='#d40707', width=5, dash=(5,2))
 
 #Logo Mark
 original_logo_mark = Image.open('instantorder_logo.png')
@@ -427,8 +427,10 @@ place_order = Button(root,
                      fg='black',
                      bg='#d40707',
                      activeforeground='black',
-                     activebackground='#fc0303')
-place_order.place(x=1300, y=740)
+                     activebackground='#fc0303',
+                     padx=30,
+                     pady=0)
+place_order.place(x=1276, y=720)
 place_order.bind('<Enter>', placeorder_on_enter)
 place_order.bind('<Leave>', placeorder_on_leave)
 
