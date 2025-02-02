@@ -1,5 +1,13 @@
 from tkinter import *
 from PIL import ImageTk, Image
+import subprocess
+
+def placeorder_click():
+    milk_tea_count= int(milk_tea_sb.get())
+    black_tea_count= int(black_tea_sb.get())
+    hot_lemon_count= int(hot_lemon_sb.get())
+    subprocess.run(['python', 'tablenumber.py'])
+    
 def placeorder_on_enter(e):
     place_order.config(bg='#fc0303',
                   fg='black')
@@ -430,7 +438,8 @@ place_order = Button(root,
                      activeforeground='black',
                      activebackground='#fc0303',
                      padx=30,
-                     pady=0)
+                     pady=0,
+                     command=placeorder_click)
 place_order.place(x=1276, y=720)
 place_order.bind('<Enter>', placeorder_on_enter)
 place_order.bind('<Leave>', placeorder_on_leave)

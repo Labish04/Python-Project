@@ -1,11 +1,15 @@
 from tkinter import *
 from PIL import ImageTk, Image
 from tkinter import messagebox
+import subprocess
+
 def login():
     if username_entry.get()=="" or password_entry.get()=="":
         messagebox.showerror("Error","All fields are required")
     elif username_entry.get()=="asdf" and password_entry.get()=="jkl;":
         messagebox.showinfo("Success","Login Successful")
+        win.destroy()
+        subprocess.run(['python','menu.py'])
 
     else:
         messagebox.showerror("Error","Wrong username or password")

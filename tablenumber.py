@@ -42,6 +42,7 @@ insert_your_table_number.place(x=370, y=120)
 #Table Number Entry
 table_number_entry = Entry(root1,
                                  font=('Arial', 70),
+                                 justify='center',
                                  width=10,
                                  highlightthickness=2,
                                  highlightbackground='#d40707',
