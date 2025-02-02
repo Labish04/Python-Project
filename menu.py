@@ -23,7 +23,24 @@ def placeorder_click():
     chicken_pizza_count=int(chicken_pizza_sb.get())
     mushroom_pizza_count=int(mushroom_pizza_sb.get())
     cheese_pizza_count=int(cheese_pizza_sb.get())
-    selected_items=sum(1 for count in [milk_tea_count, black_tea_count, hot_lemon_count, black_coffee_count, milk_coffee_count, hot_chocolate_count, coke_count, sprite_count, fanta_count, lassi_count, veg_momo_count, buff_momo_count, chicken_momo_count, chicken_burger_count, ham_burger_count, veg_burger_count, chicken_pizza_count, mushroom_pizza_count, cheese_pizza_count] if count > 0)
+    selected_items=sum(1 for count in [milk_tea_count, 
+                                       black_tea_count, 
+                                       hot_lemon_count, 
+                                       black_coffee_count, 
+                                       milk_coffee_count, 
+                                       hot_chocolate_count, 
+                                       coke_count, sprite_count, 
+                                       fanta_count, 
+                                       lassi_count, 
+                                       veg_momo_count, 
+                                       buff_momo_count, 
+                                       chicken_momo_count, 
+                                       chicken_burger_count, 
+                                       ham_burger_count, 
+                                       veg_burger_count, 
+                                       chicken_pizza_count, 
+                                       mushroom_pizza_count, 
+                                       cheese_pizza_count] if count > 0)
     if selected_items >= 1:
         subprocess.run(['python', 'tablenumber.py'])
     else:
