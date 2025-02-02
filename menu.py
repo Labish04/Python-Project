@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import messagebox
 from PIL import ImageTk, Image
 import subprocess
 
@@ -6,8 +7,27 @@ def placeorder_click():
     milk_tea_count= int(milk_tea_sb.get())
     black_tea_count= int(black_tea_sb.get())
     hot_lemon_count= int(hot_lemon_sb.get())
-    subprocess.run(['python', 'tablenumber.py'])
-    
+    black_coffee_count= int(black_coffee_sb.get())
+    milk_coffee_count= int(milk_coffee_sb.get())
+    hot_chocolate_count= int(hot_chocolate_sb.get())
+    coke_count=int(coke_sb.get())
+    sprite_count=int(sprite_sb.get())
+    fanta_count=int(fanta_sb.get())
+    lassi_count=int(lassi_sb.get())
+    veg_momo_count=int(veg_momo_sb.get())
+    buff_momo_count=int(buff_momo_sb.get())
+    chicken_momo_count=int(chicken_momo_sb.get())
+    chicken_burger_count=int(chicken_burger_sb.get())
+    ham_burger_count=int(ham_burger_sb.get())
+    veg_burger_count=int(veg_burger_sb.get())
+    chicken_pizza_count=int(chicken_pizza_sb.get())
+    mushroom_pizza_count=int(mushroom_pizza_sb.get())
+    cheese_pizza_count=int(cheese_pizza_sb.get())
+    selected_items=sum(1 for count in [milk_tea_count, black_tea_count, hot_lemon_count, black_coffee_count, milk_coffee_count, hot_chocolate_count, coke_count, sprite_count, fanta_count, lassi_count, veg_momo_count, buff_momo_count, chicken_momo_count, chicken_burger_count, ham_burger_count, veg_burger_count, chicken_pizza_count, mushroom_pizza_count, cheese_pizza_count] if count > 0)
+    if selected_items >= 1:
+        subprocess.run(['python', 'tablenumber.py'])
+    else:
+        messagebox.showerror('Error', 'Please selected at least one item form menu.')
 def placeorder_on_enter(e):
     place_order.config(bg='#fc0303',
                   fg='black')
